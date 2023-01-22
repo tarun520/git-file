@@ -1,8 +1,12 @@
-// var items=document.querySelectorAll('.list-group-item')
-// items[1].style.background='green'
-// items[2].style.color='white'
-var odd=document.querySelectorAll('li:nth-child(odd)');
-for(var i=0;i<odd.length;i++)
-{
-    odd[i].style.background='green'
-}
+// var itemlist=document.querySelector('#items')
+
+// console.log(itemlist.firstChild);
+// itemlist.firstElementChild.textContent='hello';
+var newDiv=document.createElement('div');
+newDiv.className='hello';
+newDiv.id='hello1';
+var newDivtext=document.createTextNode('hello div');
+newDiv.appendChild(newDivtext);
+var container=document.querySelector('header .container');
+var h1=document.querySelector('header h1');
+container.insertBefore(newDiv,h1);
